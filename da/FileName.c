@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// ÃÖ°íÂ÷Ç×À» 100À¸·Î Á¦ÇÑ.
+// ìµœê³ ì°¨í•­ì„ 100ìœ¼ë¡œ ì œí•œ.
 #define MAX_DEGREE 100
 
 
@@ -41,17 +41,17 @@ int main() {
     int polynomial1[MAX_DEGREE + 1], polynomial2[MAX_DEGREE + 1], result[MAX_DEGREE * 2 + 1];
 
 
-    printf("Ã¹ ¹øÂ° ´ÙÇ×½ÄÀÇ Â÷¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+    printf("ì²« ë²ˆì§¸ ë‹¤í•­ì‹ì˜ ì°¨ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
     scanf("%d", &degree1);
-    printf("Ã¹ ¹øÂ° ´ÙÇ×½ÄÀÇ °è¼ö¸¦ ³»¸²Â÷¼øÀ¸·Î ÀÔ·ÂÇÏ¼¼¿ä:\n");
+    printf("ì²« ë²ˆì§¸ ë‹¤í•­ì‹ì˜ ê³„ìˆ˜ë¥¼ ë‚´ë¦¼ì°¨ìˆœìœ¼ë¡œ ì…ë ¥í•˜ì„¸ìš”:\n");
     for (int i = degree1; i >= 0; i--) {
         scanf("%d", &polynomial1[i]);
     }
 
 
-    printf("µÎ ¹øÂ° ´ÙÇ×½ÄÀÇ Â÷¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+    printf("ë‘ ë²ˆì§¸ ë‹¤í•­ì‹ì˜ ì°¨ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
     scanf("%d", &degree2);
-    printf("µÎ ¹øÂ° ´ÙÇ×½ÄÀÇ °è¼ö¸¦ ³»¸²Â÷¼øÀ¸·Î ÀÔ·ÂÇÏ¼¼¿ä:\n");
+    printf("ë‘ ë²ˆì§¸ ë‹¤í•­ì‹ì˜ ê³„ìˆ˜ë¥¼ ë‚´ë¦¼ì°¨ìˆœìœ¼ë¡œ ì…ë ¥í•˜ì„¸ìš”:\n");
     for (int i = degree2; i >= 0; i--) {
         scanf("%d", &polynomial2[i]);
     }
@@ -60,13 +60,13 @@ int main() {
     multiply_polynomials(degree1, polynomial1, degree2, polynomial2, result);
 
  
-    printf("Ã¹ ¹øÂ° ´ÙÇ×½Ä: ");
+    printf("ì²« ë²ˆì§¸ ë‹¤í•­ì‹: ");
     print_polynomial(degree1, polynomial1);
-    printf("µÎ ¹øÂ° ´ÙÇ×½Ä: ");
+    printf("ë‘ ë²ˆì§¸ ë‹¤í•­ì‹: ");
     print_polynomial(degree2, polynomial2);
-    printf("µÎ ´ÙÇ×½ÄÀÇ °ö: ");
+    printf("ë‘ ë‹¤í•­ì‹ì˜ ê³±: ");
     print_polynomial(degree1 + degree2, result);
-
+    system("pause");
     return 0;
 }
 
